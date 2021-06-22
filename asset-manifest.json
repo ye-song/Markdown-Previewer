@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/mardown-previewer/static/js/main.e6f9568b.chunk.js",
+    "main.js.map": "/mardown-previewer/static/js/main.e6f9568b.chunk.js.map",
+    "runtime-main.js": "/mardown-previewer/static/js/runtime-main.dd57e092.js",
+    "runtime-main.js.map": "/mardown-previewer/static/js/runtime-main.dd57e092.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/mardown-previewer/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.78c3c276.chunk.js": "/mardown-previewer/static/js/2.78c3c276.chunk.js",
+    "static/js/2.78c3c276.chunk.js.map": "/mardown-previewer/static/js/2.78c3c276.chunk.js.map",
+    "static/js/3.d72a2838.chunk.js": "/mardown-previewer/static/js/3.d72a2838.chunk.js",
+    "static/js/3.d72a2838.chunk.js.map": "/mardown-previewer/static/js/3.d72a2838.chunk.js.map",
+    "index.html": "/mardown-previewer/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/mardown-previewer/static/css/2.61b4cb56.chunk.css.map",
+    "static/js/2.78c3c276.chunk.js.LICENSE.txt": "/mardown-previewer/static/js/2.78c3c276.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd57e092.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.78c3c276.chunk.js",
+    "static/js/main.e6f9568b.chunk.js"
+  ]
+}
