@@ -1,10 +1,17 @@
-import React from "react";
-//import Badge from "react-bootstrap/Badge";
-//npm install @material-ui/core
-import Badge from "@material-ui/core/Badge";
-let marked = require("marked");
+import React from 'react';
+import marked from 'marked';
+import Prism from "prismjs";
+import './App.css';
 
-export default class App extends React.Component{
+// ALLOWS LINE BREAKS WITH RETURN BUTTON
+marked.setOptions({
+  breaks: true,
+  highlight: function (code) {
+    return Prism.highlight(code, Prism.languages.javascript, 'javascript');
+  }
+});
+
+class App extends React.Component{
   constructor (props){
     super(props)
     this.state = {
@@ -19,11 +26,12 @@ export default class App extends React.Component{
   render(){
 
     var inputStyle = {
-      width: "400px",
+      width: "500px",
       height: "80vh",
       marginLeft: "auto",
       marginRight: "auto",
-      padding: "10px"
+      padding: "10px",
+      display: "block"
     }
 
     var outputStyle = {
@@ -38,54 +46,25 @@ export default class App extends React.Component{
     return(
       <div className="App">
         <div className="container">
-
-          <div className = "row mt-4">
-            <div className = "col text-center">
-              <h1>
-                <Badge className="text-align-center" variant="light">
-                  Markdown Previewer
-                </Badge>
-              </h1>
+            <h1 className="title">Markdown Previewer</h1>
+          <div class="row">
+            <div class="column">
+              <h4 className="subHeader">Markdown Input</h4>
+              <textarea id="editor" style={inputStyle}
+                  value={this.state.markdown}
+                  onChange = {(e)=>{
+                    this.updateMarkdown(e.target.value);
+                  }}>
+              </textarea>
+            </div>
+            <div class="column">
+              <h4 className="subHeader">Preview</h4>
+              <div id="preview" style={outputStyle}
+                dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
+              </div>
             </div>
           </div>
-
-          <div className="row mt-4">
-
-            <div className="col-md-6">
-              <div className="col text-center">
-                <h4>
-                  <Badge className="text-align-center" variant="secondary">
-                    Markdown Input
-                  </Badge>
-                </h4>
-              </div>
-              <div className="mark-input" style={inputStyle}>
-                <textarea className="input" style={inputStyle}
-                value={this.state.markdown}
-                onChange = {(e)=>{
-                  this.updateMarkdown(e.target.value);
-                }}>
-                </textarea>
-              </div>
-            </div>
-
-            <div className="col-md-6">
-              <div className="col text-center">
-                <h4>
-                  <Badge className="text-align-center" variant="secondary">
-                    Preview
-                  </Badge>
-                </h4>
-              </div>
-              <div style = {outputStyle}
-              dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-
       </div>
   );}
 }
@@ -132,5 +111,8 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-<img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg" width="200"/>
+![freeCodeCamp](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+
 `;
+
+export default App;

@@ -1,0 +1,68 @@
+.title {
+  text-align: center;
+}
+
+.subHeader {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+img[alt=freeCodeCamp] {
+  width: 200px;
+}
+
+// MARKDOWN STYLES
+#preview {
+  padding: 0 1rem;
+
+  blockquote {
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  > p > code {
+    padding: 3px;
+  }
+
+  code {
+    background: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  pre {
+    display: block;
+    overflow: auto;
+    background: white;
+    padding: 5px;
+    line-height: 1.2;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
