@@ -1,7 +1,7 @@
 import React from 'react';
 import marked from 'marked';
 import Prism from "prismjs";
-import './App.css';
+import './App.scss';
 
 // ALLOWS LINE BREAKS WITH RETURN BUTTON
 marked.setOptions({
