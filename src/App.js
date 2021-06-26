@@ -2,6 +2,7 @@ import React from 'react';
 import marked from 'marked';
 import Prism from "prismjs";
 import './App.scss';
+import {Image, ScrollView, Text} from 'react-native';
 
 // ALLOWS LINE BREAKS WITH RETURN BUTTON
 marked.setOptions({
@@ -59,9 +60,11 @@ class App extends React.Component{
             </div>
             <div class="column">
               <h4 className="subHeader">Markdown Display</h4>
+              <ScrollView style={{backgroundColor: "#DCDCDC", width:"500px", marginLeft: "auto", marginRight: "auto"}}>
               <div id="preview" style={outputStyle}
                 dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
               </div>
+              </ScrollView>
             </div>
           </div>
         </div>
