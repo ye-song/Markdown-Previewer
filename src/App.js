@@ -58,7 +58,7 @@ class App extends React.Component{
               </textarea>
             </div>
             <div class="column">
-              <h4 className="subHeader">Preview</h4>
+              <h4 className="subHeader">Markdown Display</h4>
               <div id="preview" style={outputStyle}
                 dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
               </div>

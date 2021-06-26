@@ -1,8 +1,19 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&display=swap');
+
 .title {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 60px;
+  color: red;
   text-align: center;
 }
 
 .subHeader {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  color: orange;
   text-align: center;
 }
 
