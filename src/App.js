@@ -60,11 +60,19 @@ class App extends React.Component{
             </div>
             <div class="column">
               <h4 className="subHeader">Markdown Display</h4>
-              <ScrollView style={{backgroundColor: "#DCDCDC", width:"500px", marginLeft: "auto", marginRight: "auto"}}>
-              <div id="preview" style={outputStyle}
-                dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
-              </div>
+              <ScrollView style={outputStyle}>
+                <div id="preview"
+                  dangerouslySetInnerHTML={{ __html: marked(this.state.markdown)}}>
+                </div>
               </ScrollView>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <button type="button" className="button"
+                    value = {""}
+                    onClick = {(e)=>{
+                      this.updateMarkdown(e.target.value);}}>Clear Input</button>
             </div>
           </div>
         </div>
